@@ -1,0 +1,37 @@
+/* Секція чим ми занімаємося */
+@media screen and (max-width: 1199px) {
+  .work-section {
+    display: none;
+  }
+}
+.work-section {
+  padding-bottom: 94px;
+}
+
+.work {
+  display: flex;
+
+  .work__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.work__item {
+  position: relative;
+}
+
+.work__title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.work__wrap {
+  position: absolute;
+  @extend %centeredFlex;
+  width: 100%;
+  min-height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+}

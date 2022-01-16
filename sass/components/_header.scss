@@ -1,0 +1,173 @@
+.header-box {
+  border-bottom: 1px solid #ececec;
+  position: relative;
+}
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--accent-color);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.logo__text {
+  color: #000;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.contact-link {
+  margin-left: auto;
+  .contact-link__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+// кнопка в хедері
+.menu-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.menu-button .icon-menu-close {
+  display: none;
+}
+.menu-button.is-open .icon-menu-close {
+  display: block;
+}
+.menu-button.is-open .icon-menu-open {
+  display: none;
+}
+
+.menu-container {
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 99;
+    background-color: tomato;
+    &is-open {
+      display: block;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact-link .contact-link__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-link {
+    display: flex;
+  }
+  .contact-link .contact-link__link {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.contact-link .contact-link__link {
+  display: flex;
+
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: var(--primary-text-color);
+
+  transition: color var(--time-transform), fill var(--time-transform);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact-link .contact-link__link {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+}
+.contact-link__mail-icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+  transition: fill var(--time-transform);
+}
+
+.contact-link__tel-icon {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+  transition: fill var(--time-transform);
+}
+.contact-link__link:hover .contact-link__mail-icon,
+.contact-link__link:focus .contact-link__mail-icon {
+  fill: var(--accent-color);
+}
+
+.contact-link__link:hover .contact-link__tel-icon,
+.contact-link__link:focus .contact-link__tel-icon {
+  fill: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .contact-link__social {
+    display: none;
+  }
+}

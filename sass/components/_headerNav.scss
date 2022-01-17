@@ -18,7 +18,6 @@
 
 .site-nav {
   display: flex;
-  margin-left: 93px;
 
   .site-nav__item:not(:last-child) {
     margin-right: 50px;
@@ -28,6 +27,17 @@
 @media screen and (min-width: 768px) {
   .site-nav {
     margin-right: 84px;
+    margin-left: 93px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav .site-nav__link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+
+    letter-spacing: 0.02em;
   }
 }
 .site-nav__link {

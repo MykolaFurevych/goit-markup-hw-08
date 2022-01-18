@@ -47,16 +47,15 @@
   position: relative;
 }
 
-.contact-link {
-  margin-left: auto;
-  .contact-link__item:not(:last-child) {
-    margin-right: 50px;
-  }
+.contact-link__item:not(:last-child) {
+  margin-right: 50px;
 }
 
-// кнопка в хедері
+// Kнопка в хедері
 .menu-button {
-  position: absolute;
+  z-index: 2;
+  // position: absolute;
+  position: fixed;
   top: 10px;
   right: 15px;
 
@@ -76,14 +75,15 @@
     display: none;
   }
 }
-.menu-button .icon-menu-close {
-  display: none;
-}
-.menu-button.is-open .icon-menu-close {
+
+.menu-button .icon-menu-open {
   display: none;
 }
 .menu-button.is-open .icon-menu-open {
   display: block;
+}
+.menu-button.is-open .icon-menu-close {
+  display: none;
 }
 @media screen and (max-width: 767px) {
   .menu-container {
@@ -114,9 +114,15 @@
     justify-content: space-between;
     align-items: center;
   }
+  .contact-link .contact-link__link {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
-.icon-menu-close {
-  z-index: 999;
+.icon-menu-open:hover,
+.icon-menu-open:focus {
+  fill: var(--accent-color);
+  transition: fill 1000ms linear;
 }
 @media screen and (max-width: 767px) {
   .site-nav {
@@ -124,15 +130,31 @@
     flex-direction: column;
     margin-right: auto;
   }
+  .contact-link__mail-icon,
+  .contact-link__tel-icon {
+    display: none;
+  }
+  .contact-link__link {
+    margin-bottom: 32px;
+  }
   .contact-link {
     display: flex;
 
     flex-flow: column-reverse;
     margin-right: auto;
   }
+  .contact-link .contact-link__link {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+  }
   .contact-link__social {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+  }
+  .unit {
+    margin-bottom: 64px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -155,12 +177,9 @@
 
 .contact-link .contact-link__link {
   display: flex;
-
   align-items: center;
 
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.02em;
 
   color: var(--primary-text-color);
@@ -206,5 +225,21 @@
 @media screen and (min-width: 768px) {
   .contact-link__social {
     display: none;
+  }
+}
+.contact-link__social .contact-link__social-media,
+.contact-link__social .contact-link__social-media {
+  font-size: 18px;
+  line-height: 1.22;
+  color: var(--accent-color);
+}
+.contact-link__social .contact-link__social-media:hover,
+.contact-link__social .contact-link__social-media:focus {
+  color: var(--accent-color);
+}
+@media screen and (max-width: 767px) {
+  .contact-link .contact-link__link--mail {
+    font-size: 24px;
+    line-height: 1.17;
   }
 }

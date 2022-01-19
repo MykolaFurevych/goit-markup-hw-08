@@ -179,7 +179,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
   }
 
   .menu-container.is-open {
@@ -201,18 +201,6 @@ img {
   }
 }
 @media screen and (min-width: 768px) {
-  .menu-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
   .contact-link .contact-link__link {
     font-size: 14px;
     line-height: 1.14;
@@ -228,13 +216,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .site-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    display: inline-block;
     margin-right: auto;
   }
 
@@ -275,7 +257,16 @@ img {
   }
 
   .unit {
-    margin-bottom: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -404,16 +395,16 @@ img {
   background-color: var(--accent-color);
 }
 
-.site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.site-nav .site-nav__item:not(:last-child) {
-  margin-right: 50px;
-}
-
 @media screen and (min-width: 768px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .site-nav .site-nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
   .site-nav {
     margin-right: 84px;
     margin-left: 93px;
@@ -472,10 +463,6 @@ img {
 
   .site-nav__item:not(:last-child) {
     margin-bottom: 32px;
-  }
-
-  .site-nav {
-    margin-bottom: 302px;
   }
 }
 /* Герой */

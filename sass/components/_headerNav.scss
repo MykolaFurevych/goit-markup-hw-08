@@ -3,7 +3,7 @@
 }
 .site-nav__item {
   position: relative;
-  display: inline-flex;
+  display: i;
 }
 .site-nav__link--current::after {
   content: '';
@@ -29,10 +29,10 @@
     margin-right: 84px;
     margin-left: 93px;
   }
-  .unit {
-    display: flex;
-    align-items: center;
-  }
+  // .unit {
+  //   display: flex;
+  //   align-items: center;
+  // }
 }
 
 @media screen and (max-width: 767px) {
@@ -58,10 +58,11 @@
 }
 .site-nav__link--current {
   color: var(--accent-color);
+  position: relative;
 }
 
 .site-nav .site-nav__link {
-  display: block;
+  display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -79,7 +80,4 @@
   .site-nav__item:not(:last-child) {
     margin-bottom: 32px;
   }
-  // .site-nav {
-  //   margin-bottom: 302px;
-  // }
 }

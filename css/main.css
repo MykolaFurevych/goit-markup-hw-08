@@ -157,6 +157,10 @@ img {
   }
 }
 
+.icon-menu-close {
+  fill: var(--accent-color);
+}
+
 .menu-button .icon-menu-open {
   display: none;
 }
@@ -178,7 +182,7 @@ img {
             justify-content: space-between;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
   }
 
@@ -201,19 +205,23 @@ img {
   }
 }
 @media screen and (min-width: 768px) {
+  .menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
   .contact-link .contact-link__link {
     font-size: 14px;
     line-height: 1.14;
   }
 }
-.icon-menu-open:hover,
-.icon-menu-open:focus {
-  fill: var(--accent-color);
-  -webkit-transition: fill 1000ms linear;
-  -o-transition: fill 1000ms linear;
-  transition: fill 1000ms linear;
-}
-
 @media screen and (max-width: 767px) {
   .site-nav {
     display: inline-block;
@@ -379,11 +387,13 @@ img {
   padding: 10px;
 }
 
+.contact-link__social-list:first-child {
+  padding-left: 0;
+}
+
 .site-nav__item {
   position: relative;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: i;
 }
 
 .site-nav__link--current::after {
@@ -412,15 +422,6 @@ img {
     margin-right: 84px;
     margin-left: 93px;
   }
-
-  .unit {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
 }
 @media screen and (max-width: 767px) {
   .site-nav .site-nav__link {
@@ -447,10 +448,11 @@ img {
 
 .site-nav__link--current {
   color: var(--accent-color);
+  position: relative;
 }
 
 .site-nav .site-nav__link {
-  display: block;
+  display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -955,7 +957,12 @@ img {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 479px) {
+  .form-box__input {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .form-box__input {
     width: 450px;
   }
@@ -1012,8 +1019,8 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity var(--time-transform), -webkit-box-shadow var(--time-transform);
   transition: opacity var(--time-transform), -webkit-box-shadow var(--time-transform);

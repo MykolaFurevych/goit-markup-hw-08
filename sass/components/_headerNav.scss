@@ -3,6 +3,7 @@
 }
 .site-nav__item {
   position: relative;
+  display: inline-flex;
 }
 .site-nav__link--current::after {
   content: '';

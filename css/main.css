@@ -381,6 +381,9 @@ img {
 
 .site-nav__item {
   position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .site-nav__link--current::after {
@@ -942,7 +945,6 @@ img {
 .form-box__input {
   margin: 0;
   padding: 15px 16px;
-  width: 450px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -952,6 +954,11 @@ img {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .form-box__input {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .form-box__input {

@@ -380,6 +380,14 @@ img {
     line-height: 1.17;
   }
 }
+.contact-link__social-list:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.contact-link__social-list {
+  padding: 10px;
+}
+
 .site-nav__item {
   position: relative;
 }
@@ -426,6 +434,10 @@ img {
     font-size: 40px;
     line-height: 1.17;
     letter-spacing: 0.02em;
+  }
+
+  .site-nav .site-nav__item:not(:last-child) {
+    margin-right: 0;
   }
 }
 .site-nav__link {

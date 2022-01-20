@@ -146,10 +146,6 @@
     line-height: 1.18;
     letter-spacing: 0.02em;
   }
-  .contact-link__social {
-    display: flex;
-    justify-content: space-between;
-  }
 
   .unit {
     display: flex;
@@ -222,6 +218,10 @@
 .contact-link__link:focus .contact-link__tel-icon {
   fill: var(--accent-color);
 }
+
+.contact-link__social {
+  display: flex;
+}
 @media screen and (min-width: 768px) {
   .contact-link__social {
     display: none;
@@ -238,6 +238,8 @@
   color: var(--accent-color);
 }
 @media screen and (max-width: 767px) {
+  .contact-link__social {
+  }
   .contact-link .contact-link__link--mail {
     font-size: 24px;
     line-height: 1.17;
@@ -252,4 +254,9 @@
 }
 .contact-link__social-list:first-child {
   padding-left: 0;
+}
+@media screen and (max-width: 767px) {
+  .contact-link__social-list {
+    padding: 5px;
+  }
 }

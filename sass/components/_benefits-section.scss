@@ -30,14 +30,15 @@
     margin: 15px;
   }
 }
+@media screen and (max-width: 767px) {
+  .benefits-set__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .benefits-set__item {
     width: calc((100% - 8 * 15px) / 4);
   }
-
-  // .benefits-set__item:not(:last-child) {
-  //   margin-right: 30px;
-  // }
 }
 
 .benefits-set__item .benefits-set__text--start {

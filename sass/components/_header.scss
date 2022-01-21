@@ -227,19 +227,22 @@
     display: none;
   }
 }
-.contact-link__social .contact-link__social-media,
+
 .contact-link__social .contact-link__social-media {
   font-size: 18px;
   line-height: 1.22;
   color: var(--accent-color);
+}
+@media screen and (max-width: 479px) {
+  .contact-link__social .contact-link__social-media {
+    font-size: 14px;
+  }
 }
 .contact-link__social .contact-link__social-media:hover,
 .contact-link__social .contact-link__social-media:focus {
   color: var(--accent-color);
 }
 @media screen and (max-width: 767px) {
-  .contact-link__social {
-  }
   .contact-link .contact-link__link--mail {
     font-size: 24px;
     line-height: 1.17;

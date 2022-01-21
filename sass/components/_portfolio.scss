@@ -101,6 +101,14 @@
   background-color: rgba(33, 150, 243, 0.9);
   transition: transform var(--time-transform);
 }
+@media screen and (max-width: 420px) {
+  .overley__text {
+    font-size: 16px;
+    line-height: 1.38;
+    padding-top: 30px;
+    padding-bottom: 90px;
+  }
+}
 .card-set__link:hover .overley__text,
 .card-set__link:focus .overley__text {
   transform: translateY(0%);

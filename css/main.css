@@ -548,7 +548,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
-    width: 696px;
+    min-width: 696px;
     font-size: 44px;
     line-height: 1.36;
   }
@@ -1048,7 +1048,7 @@ img {
 }
 
 .modal {
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);

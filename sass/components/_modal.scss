@@ -1,9 +1,10 @@
 /*Модальне вікно*/
 .backdrop {
   position: fixed;
-  padding-top: 20px;
+  padding-top: 94px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-bottom: 93px;
 
   top: 0;
   left: 0;
@@ -20,7 +21,7 @@
 }
 
 // .modal {
-//   // position: absolute;
+//
 //   position: relative;
 //   max-height: 609px;
 //   top: 50%;

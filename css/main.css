@@ -133,7 +133,7 @@ img {
 
 .menu-button {
   z-index: 2;
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 15px;
   display: -webkit-inline-box;
@@ -204,6 +204,10 @@ img {
     z-index: 1;
   }
 }
+.icon-menu-close {
+  position: fixed;
+}
+
 @media screen and (min-width: 768px) {
   .menu-container {
     display: -webkit-box;
@@ -377,6 +381,12 @@ img {
 @media screen and (max-width: 767px) {
   .contact-link .contact-link__link--mail {
     font-size: 24px;
+    line-height: 1.17;
+  }
+}
+@media screen and (max-width: 479px) {
+  .contact-link .contact-link__link--tel {
+    font-size: 28px;
     line-height: 1.17;
   }
 }
@@ -1030,6 +1040,7 @@ img {
 /*Модальне вікно*/
 .backdrop {
   position: fixed;
+  padding-top: 20px;
   top: 0;
   left: 0;
   width: 100%;
@@ -1061,13 +1072,13 @@ img {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
   .modal {
-    width: 100%;
+    max-width: 528px;
     height: 609px;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .modal {
     width: 528px;
     min-height: 581px;
@@ -1144,6 +1155,20 @@ img {
   color: var(--title-text-color);
 }
 
+@media screen and (max-width: 479px) {
+  .form__field {
+    font-size: 10px;
+  }
+
+  .form-title {
+    font-size: 18px;
+  }
+
+  .form__input {
+    width: 100%;
+    min-height: 30px;
+  }
+}
 .form__comment {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;

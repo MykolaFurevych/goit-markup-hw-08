@@ -54,8 +54,9 @@
 // Kнопка в хедері
 .menu-button {
   z-index: 2;
-  // position: absolute;
-  position: fixed;
+  position: absolute;
+  // position: relative;
+  // position: fixed;
   top: 10px;
   right: 15px;
 
@@ -75,6 +76,7 @@
     display: none;
   }
 }
+
 .icon-menu-close {
   fill: var(--accent-color);
 }
@@ -109,7 +111,9 @@
     z-index: 1;
   }
 }
-
+.icon-menu-close {
+  position: fixed;
+}
 @media screen and (min-width: 768px) {
   .menu-container {
     display: flex;
@@ -242,13 +246,19 @@
 .contact-link__social .contact-link__social-media:focus {
   color: var(--accent-color);
 }
+
 @media screen and (max-width: 767px) {
   .contact-link .contact-link__link--mail {
     font-size: 24px;
     line-height: 1.17;
   }
 }
-
+@media screen and (max-width: 479px) {
+  .contact-link .contact-link__link--tel {
+    font-size: 28px;
+    line-height: 1.17;
+  }
+}
 .contact-link__social-list:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }

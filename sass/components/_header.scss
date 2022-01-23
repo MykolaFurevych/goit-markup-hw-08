@@ -72,6 +72,7 @@
   &:focus {
     color: var(--accent-color);
   }
+
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -111,9 +112,7 @@
     z-index: 1;
   }
 }
-.icon-menu-close {
-  position: fixed;
-}
+
 @media screen and (min-width: 768px) {
   .menu-container {
     display: flex;

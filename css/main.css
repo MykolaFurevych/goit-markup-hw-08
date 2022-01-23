@@ -204,10 +204,6 @@ img {
     z-index: 1;
   }
 }
-.icon-menu-close {
-  position: fixed;
-}
-
 @media screen and (min-width: 768px) {
   .menu-container {
     display: -webkit-box;
@@ -1054,6 +1050,7 @@ img {
   transition: opacity var(--time-transform), box-shadow var(--time-transform);
   transition: opacity var(--time-transform), box-shadow var(--time-transform), -webkit-box-shadow var(--time-transform);
   z-index: 9;
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -1063,21 +1060,21 @@ img {
 
 .modal {
   position: relative;
-  max-height: 609px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) {
   .modal {
-    max-width: 450px;
-    height: 609px;
+    width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    margin: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1302,7 +1299,7 @@ img {
 
 .label__icon {
   display: block;
-  width: 16px;
+  min-width: 16px;
   height: 15px;
   border: 2px solid var(--title-text-color);
   border-radius: 4px;
